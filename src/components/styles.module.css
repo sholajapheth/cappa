@@ -1,0 +1,67 @@
+
+.showcaseBg {
+    background-image: url("../assets/images/bg_1.jpg");
+    background-size: cover;
+    background-position:  center;
+}
+
+.ourStoryBg{
+    background-image: url("../assets/images/bg_2.png");
+        background-size: cover;
+        background-position: center;
+}
+
+.menuBg{
+    background-image: url("../assets/images/bg.png");
+        background-size: cover;
+        background-position: center;
+}
+
+.cateringBg {
+    background-image: url("../assets/images/bg_3.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.galleryBg {
+    background-image: url("../assets/images/bg_4.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.offerBg {
+    background-image: url("../assets/images/bg_5.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.freshBg {
+    background-image: url("../assets/images/bg_6.jpg");
+    background-size: cover;
+    background-position: center;
+
+}
+
+.footerBg {
+    background-image: url("../assets/images/bg.png");
+    background-size: cover;
+    background-position: center;
+
+}
+
+.contactBg {
+    background-image: url("../assets/images/contact_img.png");
+    background-size: cover;
+    background-position: center;
+    
+}
+
+/* .contactBg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 93, 123, 0.5);
+} */

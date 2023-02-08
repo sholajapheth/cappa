@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import logo from "../assets/images/logo.png";
 import { NavLink } from "react-router-dom";
 import { SlMenu } from "react-icons/sl";
+import { AiOutlineClose } from "react-icons/ai";
 
 const NavButton = ({ name, link }) => {
   const path = window.location.pathname;
@@ -55,7 +56,7 @@ const DesktopNav = () => {
   );
 };
 
-const MobileNav = () => (
+const MobileNav = ({ setShow }) => (
   <div className="bg-white h-[15rem] flex flex-col items-center relative z-10 pt-[3rem] md:hidden ">
     <div className="flex items-center w-full justify-between px-[2rem]">
       <div className="w-4 h-4  " />
@@ -66,16 +67,63 @@ const MobileNav = () => (
           <Button name="Book A Table" />
         </div>
       </div>
-      <SlMenu className="text-[22px]  text-pri" />
+      <button onClick={() => setShow(true)}>
+        <SlMenu className="text-[22px]  text-pri" />
+      </button>
     </div>
   </div>
 );
 
+const Navs = ({ setShow }) => {
+  return (
+    <div
+      className=" 
+    absolute z-40 w-full"
+    >
+      <div
+        className="bg-white 
+  h-screen relative  w-full flex justify-center items-center 
+  "
+      >
+        <button
+          onClick={() => setShow(false)}
+          className="absolute top-10 right-10 text-[2rem]"
+        >
+          <AiOutlineClose />
+        </button>
+        <div
+          className="flex  items-center
+      flex-col gap-y-8 text-pri text-[22px] 
+      "
+        >
+          <NavLink
+            onClick={() => setShow(false)}
+            activeStyle={{
+              color: "red",
+              fontWeight: "bold",
+            }}
+            to={"/"}
+          >
+            Home
+          </NavLink>
+
+          <NavLink onClick={() => setShow(false)} to={"/reservation"}>
+            Reservation
+          </NavLink>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const Header = () => {
+  const [show, setShow] = useState(false);
+
   return (
     <>
+      {show && <Navs setShow={setShow} />}
       <DesktopNav />
-      <MobileNav />
+      <MobileNav setShow={setShow} />
     </>
   );
 };

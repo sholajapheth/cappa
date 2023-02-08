@@ -3,7 +3,9 @@ import {
   Catering,
   Contact,
   Gallery,
+  Map,
   Menu,
+  MyMap,
   Offer,
   OnlyFreshFood,
   OurStory,
@@ -19,6 +21,7 @@ const Home = () => {
       <Catering />
       <Gallery />
       <Offer />
+      <MyMap />
       <OnlyFreshFood />
       <Contact />
     </div>

@@ -25,7 +25,7 @@ const Menu = () => {
       <p className="font-kau md:text-[40px] text-[30px] text-[#5b6670] text-center">
         Menu & Sweets
       </p>
-      <div className="md:w-[70%] mt-[3rem]">
+      <div className="md:w-[70%] w-full mt-[3rem]">
         <p className="font-kau text-[20px] text-[#5b6670] mb-[4rem]">
           What we Offer
         </p>
